@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hangman Game</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">Game Portal</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse bg-dark navbar-dark"  id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/date">Date</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/hangman">Hangman</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container mt-5">
+  <h1 class="text-center">Hangman Game</h1>
+  <p class="text-center" th:text="${correct}"></p>
+  <form action="/hangman" method="post" class="text-center">
+    <div class="form-group">
+      <label for="operand1">Enter a letter:</label>
+      <input type="text" id="operand1" name="operand1" class="form-control w-25 mx-auto" maxlength="1" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Guess</button>
+  </form>
+  <p class="text-center text-danger" th:text="${message}"></p>
+  <p class="text-center text-warning" th:text="${incorrectGuesses}"></p>
+</div>
+</body>
+</html>
+
+

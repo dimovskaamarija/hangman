@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+  <h1 class="text-center">Welcome to the Game Portal</h1>
+  <div class="row mt-4">
+    <div class="col text-center">
+      <a href="/date" class="btn btn-primary">Date</a>
+    </div>
+    <div class="col text-center">
+      <a href="/hangman" class="btn btn-primary">Hangman</a>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col text-center">
+      <h2>Play Hangman Directly</h2>
+      <form action="/hangman" method="post" class="form-inline justify-content-center">
+        <div class="form-group mb-2">
+          <label for="guess" class="sr-only">Enter a letter:</label>
+          <input type="text" id="guess" name="operand1" class="form-control mx-sm-3" maxlength="1" placeholder="Enter a letter" required>
+        </div>
+        <button type="submit" class="btn btn-success mb-2">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
